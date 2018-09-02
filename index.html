@@ -6,13 +6,70 @@
       window.onload = function(){
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
-        
-      };
-    </script>
+				
+// use on-off switch to show and hide info, learned in today's class
+
+			var inboxCount = document.createElement('div');
+			inboxCount.className = 'iCount';
+			inboxCount.innerHTML = 'Inbox Count: ' + geemails.length;
+			main.appendChild(inboxCount);
+
+
+			for(var i = 0; i<geemails.length; i++){
+	
+			var senderBox = document.createElement('div');
+			senderBox.className = 'sender';
+			senderBox.innerHTML = 'Sender: ' + geemails[i].sender + ' ';
+			main.appendChild(senderBox);
+			
+			var dateBox = document.createElement('div');
+			dateBox.className = 'date';
+			dateBox.innerHTML = 'Date: ' + geemails[i].date + ' ';
+			main.appendChild(dateBox);
+
+  		var subjectBox = document.createElement('div');
+  		subjectBox.className = 'subject';
+  		subjectBox.innerHTML = 'Subject: ' + geemails[i].subject + ' ';
+  		main.appendChild(subjectBox);
+
+			var bodyBox = document.createElement('div');
+			bodyBox.className = 'body';
+			bodyBox.innerHTML = 'Body: ' + geemails[i].body;
+			main.appendChild(bodyBox);
+
+			}
+		}
+
+
+var divElem = document.getElementsByClassName('body');
+
+for (var i = 0; i<divElem.length; i++){
+  
+	divElem[i].addEventListener('click', showMsg);
+
+}
+
+function showMsg(){
+
+	var bElem = this.querySelectorAll('.body')[1];
+
+ 		if (bElem.style.display === 'block'){
+   		bElem.style.display = 'none';
+		}else{
+   bElem.style.display = 'block';
+    
+// this allows you to show the child of that particular item
+ } 
+console.log(bElem); 
+ 
+}
+
+
+		</script>
+		<title>feeMail</title>
 	</head>
 	<body>
 		<div class="container" id="main">
-			Build Me!
 		</div>
 	</body>
 </html>

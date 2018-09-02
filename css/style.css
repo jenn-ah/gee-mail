@@ -1,0 +1,15 @@
+.subject {
+    display: inline;
+}
+
+.sender {
+    display: inline;
+}
+
+.date {
+    display: inline;
+}
+
+/* .body {
+    display: none;
+} */
