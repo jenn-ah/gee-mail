@@ -6,39 +6,37 @@
       window.onload = function(){
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
-				
-// use on-off switch to show and hide info, learned in today's class
+		
 
-			var inboxCount = document.createElement('div');
-			inboxCount.className = 'iCount';
-			inboxCount.innerHTML = 'Inbox Count: ' + geemails.length;
-			main.appendChild(inboxCount);
+		var inboxCount = document.createElement('div');
+		inboxCount.className = 'iCount';
+		inboxCount.innerHTML = 'Inbox Count: ' + geemails.length;
+		main.appendChild(inboxCount);
 
-
-			for(var i = 0; i<geemails.length; i++){
+		for(var i = 0; i<geemails.length; i++){
 	
-			var senderBox = document.createElement('div');
-			senderBox.className = 'sender';
-			senderBox.innerHTML = 'Sender: ' + geemails[i].sender + ' ';
-			main.appendChild(senderBox);
+		var senderBox = document.createElement('div');
+		senderBox.className = 'sender';
+		senderBox.innerHTML = 'Sender: ' + geemails[i].sender + ' ';
+		main.appendChild(senderBox);
 			
-			var dateBox = document.createElement('div');
-			dateBox.className = 'date';
-			dateBox.innerHTML = 'Date: ' + geemails[i].date + ' ';
-			main.appendChild(dateBox);
+		var dateBox = document.createElement('div');
+		dateBox.className = 'date';
+		dateBox.innerHTML = 'Date: ' + geemails[i].date + ' ';
+		main.appendChild(dateBox);
 
   		var subjectBox = document.createElement('div');
   		subjectBox.className = 'subject';
   		subjectBox.innerHTML = 'Subject: ' + geemails[i].subject + ' ';
   		main.appendChild(subjectBox);
 
-			var bodyBox = document.createElement('div');
-			bodyBox.className = 'body';
-			bodyBox.innerHTML = 'Body: ' + geemails[i].body;
-			main.appendChild(bodyBox);
+		var bodyBox = document.createElement('div');
+		bodyBox.className = 'body';
+		bodyBox.innerHTML = 'Body: ' + geemails[i].body;
+		main.appendChild(bodyBox);
 
-			}
 		}
+	}
 
 
 var divElem = document.getElementsByClassName('body');
@@ -50,13 +48,12 @@ for (var i = 0; i<divElem.length; i++){
 }
 
 function showMsg(){
+	var bElem = this.querySelectorAll('.body')[0];
 
-	var bElem = this.querySelectorAll('.body')[1];
-
- 		if (bElem.style.display === 'block'){
+ 	if (bElem.style.display === 'none'){
+   		bElem.style.display = 'block';
+	}else{
    		bElem.style.display = 'none';
-		}else{
-   bElem.style.display = 'block';
     
 // this allows you to show the child of that particular item
  } 
