@@ -15,11 +15,17 @@
 
 		for(var i = 0; i<geemails.length; i++){
 	
+		// var mainDiv = document.createElement('div');
+  		// // mainDiv.className = 'body';
+  		// mainDiv.innerHTML = geemails[i].body;
+  		// mainDiv.addEventListener('click', showMsg);
+  		// main.appendChild(mainDiv);
+
 		var senderBox = document.createElement('div');
 		senderBox.className = 'sender';
 		senderBox.innerHTML = 'Sender: ' + geemails[i].sender + ' ';
 		main.appendChild(senderBox);
-			
+		
 		var dateBox = document.createElement('div');
 		dateBox.className = 'date';
 		dateBox.innerHTML = 'Date: ' + geemails[i].date + ' ';
@@ -35,32 +41,78 @@
 		bodyBox.innerHTML = 'Body: ' + geemails[i].body;
 		main.appendChild(bodyBox);
 
-		}
-	}
+		var mainDiv = document.createElement('div');
+  		// mainDiv.className = 'body';
+  		mainDiv.innerHTML = geemails[i].body;
+  		mainDiv.addEventListener('click', showMsg);
+  		document.body.appendChild(mainDiv);
 
-
-var divElem = document.getElementsByClassName('body');
-
-for (var i = 0; i<divElem.length; i++){
-  
-	divElem[i].addEventListener('click', showMsg);
-
-}
-
-function showMsg(){
-	var bElem = this.querySelectorAll('.body')[0];
-
- 	if (bElem.style.display === 'none'){
-   		bElem.style.display = 'block';
-	}else{
-   		bElem.style.display = 'none';
-    
-// this allows you to show the child of that particular item
+		function showMsg(){
+			var bElem = this.querySelectorAll('.body')[0];
+ 			if (bElem.style.display === 'block'){
+   				bElem.style.display = 'none';
+			}else{
+   				bElem.style.display = 'block';
  } 
-console.log(bElem); 
+
+		// console.log(geemails[i].body);
+		
+		// var mainDiv = document.getElementById('main');
+  		// // mainDiv.className = 'body';
+  		// mainDiv.innerHTML = geemails[i].body;
+  		// mainDiv.addEventListener('click', showMsg);
+  		// document.body.appendChild(mainDiv);
+
+ 		//  console.log(mainDiv);
+
+// 		 function showMsg(){
+// 			var bElem = this.querySelectorAll('.body')[0];
+// 			// console.log(bElem); 
+//  			if (bElem.style.display === 'block'){
+//    				bElem.style.display = 'none';
+// 			}else{
+//    				bElem.style.display = 'block';
+//  } 
+			// console.log(this.innerHTML); 
  
 }
 
+		}
+	}
+
+// }
+
+//   var mainDiv = document.getElementsByClassName('container');
+//   mainDiv.className = 'body';
+//   mainDiv.innerHTML = geemails[i].body;
+//   mainDiv.addEventListener('click', showMsg);
+//   document.body.appendChild(mainDiv);
+
+//   console.log(mainDiv);
+
+// ----------------------
+// var divElem = document.getElementsByClassName('body');
+
+// for (var i = 0; i<divElem.length; i++){
+  
+// 	divElem[i].addEventListener('click', showMsg);
+
+// }
+
+// function showMsg(){
+// 	var bElem = this.querySelectorAll('.body')[0];
+
+//  	if (bElem.style.display === 'none'){
+//    		bElem.style.display = 'block';
+// 	}else{
+//    		bElem.style.display = 'none';
+    
+// // this allows you to show the child of that particular item
+//  } 
+// console.log(bElem); 
+ 
+// }
+// ------------------------
 
 		</script>
 		<title>feeMail</title>
