@@ -7,7 +7,6 @@
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
 		
-
 		var inboxCount = document.createElement('div');
 		inboxCount.className = 'iCount';
 		inboxCount.innerHTML = 'Inbox Count: ' + geemails.length;
@@ -47,13 +46,17 @@
 		bodyBox.innerHTML = 'Body: ' + geemails[i].body;
 		mainDiv.appendChild(bodyBox);
 
-		function showMsg(){
+ } 
+ 		function showMsg(){
 			var bElem = this.querySelectorAll('.body')[0];
  			if (bElem.style.display === 'block'){
    				bElem.style.display = 'none';
 			}else{
    				bElem.style.display = 'block';
- } 
+
+		}
+	}
+	  }
 
 // 		var mainDiv = document.getElementsByClassName('body');
 //   		mainDiv.className = 'body';
@@ -88,11 +91,6 @@
 //    				bElem.style.display = 'block';
 //  } 
 			// console.log(this.innerHTML); 
- 
-}
-
-		}
-	}
 
 // }
 
