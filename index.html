@@ -14,6 +14,12 @@
 		main.appendChild(inboxCount);
 
 		for(var i = 0; i<geemails.length; i++){
+
+		var mainDiv = document.getElementsByClassName('body');
+  		mainDiv.className = 'body';
+  		mainDiv.innerHTML = geemails[i].body;
+  		mainDiv.addEventListener('click', showMsg);
+  		document.body.appendChild(mainDiv);
 	
 		// var mainDiv = document.createElement('div');
   		// // mainDiv.className = 'body';
@@ -24,28 +30,22 @@
 		var senderBox = document.createElement('div');
 		senderBox.className = 'sender';
 		senderBox.innerHTML = 'Sender: ' + geemails[i].sender + ' ';
-		main.appendChild(senderBox);
+		mainDiv.appendChild(senderBox);
 		
 		var dateBox = document.createElement('div');
 		dateBox.className = 'date';
 		dateBox.innerHTML = 'Date: ' + geemails[i].date + ' ';
-		main.appendChild(dateBox);
+		mainDiv.appendChild(dateBox);
 
   		var subjectBox = document.createElement('div');
   		subjectBox.className = 'subject';
   		subjectBox.innerHTML = 'Subject: ' + geemails[i].subject + ' ';
-  		main.appendChild(subjectBox);
+  		mainDiv.appendChild(subjectBox);
 
 		var bodyBox = document.createElement('div');
 		bodyBox.className = 'body';
 		bodyBox.innerHTML = 'Body: ' + geemails[i].body;
-		main.appendChild(bodyBox);
-
-		var mainDiv = document.createElement('div');
-  		// mainDiv.className = 'body';
-  		mainDiv.innerHTML = geemails[i].body;
-  		mainDiv.addEventListener('click', showMsg);
-  		document.body.appendChild(mainDiv);
+		mainDiv.appendChild(bodyBox);
 
 		function showMsg(){
 			var bElem = this.querySelectorAll('.body')[0];
@@ -54,6 +54,20 @@
 			}else{
    				bElem.style.display = 'block';
  } 
+
+// 		var mainDiv = document.getElementsByClassName('body');
+//   		mainDiv.className = 'body';
+//   		mainDiv.innerHTML = geemails[i].body;
+//   		mainDiv.addEventListener('click', showMsg);
+//   		document.body.appendChild(mainDiv);
+
+// 		function showMsg(){
+// 			var bElem = this.querySelectorAll('.body')[0];
+//  			if (bElem.style.display === 'block'){
+//    				bElem.style.display = 'none';
+// 			}else{
+//    				bElem.style.display = 'block';
+//  } 
 
 		// console.log(geemails[i].body);
 		
