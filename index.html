@@ -15,7 +15,7 @@
 
 		var inboxCount = document.createElement('div');
 		inboxCount.className = 'iCount';
-		inboxCount.innerHTML = 'Inbox Count: ';
+		inboxCount.innerHTML = 'Inbox: ' + geemails.length;
 		document.body.appendChild(inboxCount);
 
 		for(var i = 0; i<geemails.length; i++){
@@ -66,16 +66,21 @@
 			nMsg.addEventListener('click', showMsgB);
 			document.body.appendChild(nMsg);
 
-  			var num1 = 10;
-      		var	num2 = num1+= 1;
-  			function add() {
-    			return ' Inbox: ' + (num1 + num2);
-  			}
-  
-// }
+			var eCount = geemails.length++;
+			var eMail = document.createElement('div');
+			eMail.className = 'newCount';
+			eMail.innerHTML = eCount;
+			// console.log(eCount);
+			inboxCount.appendChild(eMail);
 
-console.log(add());
-
+ 			// var num1 = geemails.length;
+ 			// function add() {
+			// 	if (num1 >= 10){
+			// 	return num1++;
+			// 	}
+			// console.log(inboxCount.push(add()));
+			//   }
+			
 			var seObj = document.createElement('div');
 			seObj.className = 'senObj';
 			seObj.innerHTML = 'Sender: ' + getNewMessage().sender + ' ';
