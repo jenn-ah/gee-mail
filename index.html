@@ -66,6 +66,16 @@
 			nMsg.addEventListener('click', showMsgB);
 			document.body.appendChild(nMsg);
 
+  			var num1 = 10;
+      		var	num2 = num1+= 1;
+  			function add() {
+    			return ' Inbox: ' + (num1 + num2);
+  			}
+  
+// }
+
+console.log(add());
+
 			var seObj = document.createElement('div');
 			seObj.className = 'senObj';
 			seObj.innerHTML = 'Sender: ' + getNewMessage().sender + ' ';
