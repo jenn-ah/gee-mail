@@ -15,5 +15,22 @@
 }
 
 .bodyMsg {
+    padding: 5px;
     border: 2px solid blue;
+}
+
+.senObj {
+    display: inline;
+}
+
+.datObj {
+    display: inline;
+}
+
+.subObj {
+    display: inline;
+}
+
+.bodObj {
+    display: none;
 }
