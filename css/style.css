@@ -34,3 +34,8 @@
 .bodObj {
     display: none;
 }
+
+.newMsgPar {
+    padding: 5px;
+    border: 2px solid blue;
+}

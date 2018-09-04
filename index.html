@@ -7,10 +7,16 @@
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
 		
+		// var eCount = geemails.length++;
+		// var inboxCount = document.createElement('div');
+		// inboxCount.className = 'iCount';
+		// inboxCount.innerHTML = 'Inbox Count: ' + geemails.length++;
+		// document.body.appendChild(inboxCount);
+
 		var inboxCount = document.createElement('div');
 		inboxCount.className = 'iCount';
-		inboxCount.innerHTML = 'Inbox Count: ' + geemails.length;
-		main.appendChild(inboxCount);
+		inboxCount.innerHTML = 'Inbox Count: ';
+		document.body.appendChild(inboxCount);
 
 		for(var i = 0; i<geemails.length; i++){
 
@@ -51,22 +57,23 @@
 		}
 	}
 
-        function damnMsgs() {
+        function newMsgs() {
 
-			var newDamnMsg = setInterval(damnMsgs, 10000);
+			var newDamnMsg = setInterval(newMsgs, 15000);
 			var nMsg = document.createElement('div');
+			nMsg.className = 'newMsgPar';
 			nMsg.innerHTML = ' ';
 			nMsg.addEventListener('click', showMsgB);
 			document.body.appendChild(nMsg);
 
 			var seObj = document.createElement('div');
 			seObj.className = 'senObj';
-			seObj.innerHTML = 'Sender: ' + getNewMessage().sender;
+			seObj.innerHTML = 'Sender: ' + getNewMessage().sender + ' ';
 			nMsg.appendChild(seObj);
 
 			var dObj = document.createElement('div');
 			dObj.className = 'datObj';
-			dObj.innerHTML = 'Date: ' + getNewMessage().date;
+			dObj.innerHTML = 'Date: ' + getNewMessage().date + ' ';
 			nMsg.appendChild(dObj);
 
 			var sObj = document.createElement('div');
@@ -76,7 +83,7 @@
 
 			var bObj = document.createElement('div');
 			bObj.className = 'bodObj';
-			bObj.innerHTML = 'Body: ' + getNewMessage().body;
+			bObj.innerHTML = 'Body: ' + getNewMessage().body + ' ';
 			nMsg.appendChild(bObj);
 
 			function showMsgB(){
@@ -85,13 +92,11 @@
    				bElem2.style.display = 'none';
 			}else{
    				bElem2.style.display = 'block';
-
+			}
 		}
 	}
 
-
-}
-damnMsgs();
+newMsgs();
 
 }
 
