@@ -61,22 +61,22 @@
 
 			var seObj = document.createElement('div');
 			seObj.className = 'senObj';
-			seObj.innerHTML = getNewMessage().sender;
+			seObj.innerHTML = 'Sender: ' + getNewMessage().sender;
 			nMsg.appendChild(seObj);
 
 			var dObj = document.createElement('div');
 			dObj.className = 'datObj';
-			dObj.innerHTML = ' ' + getNewMessage().date;
+			dObj.innerHTML = 'Date: ' + getNewMessage().date;
 			nMsg.appendChild(dObj);
 
 			var sObj = document.createElement('div');
 			sObj.className = 'subObj';
-			sObj.innerHTML = ' ' + getNewMessage().subject;
+			sObj.innerHTML = 'Subject: ' + getNewMessage().subject;
 			nMsg.appendChild(sObj);
 
 			var bObj = document.createElement('div');
 			bObj.className = 'bodObj';
-			bObj.innerHTML = ' ' + getNewMessage().body;
+			bObj.innerHTML = 'Body: ' + getNewMessage().body;
 			nMsg.appendChild(bObj);
 
 			function showMsgB(){
