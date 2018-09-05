@@ -11,7 +11,7 @@
 
 		var inboxCount = document.createElement('div');
 		inboxCount.id = 'iCount';
-		inboxCount.innerHTML = '';
+		inboxCount.innerHTML = geemails.length;
 		document.body.appendChild(inboxCount);
 
 		for(var i = 0; i<geemails.length; i++){
@@ -42,7 +42,7 @@
 		bodyBox.innerHTML = 'Body: ' + geemails[i].body;
 		mainDiv.appendChild(bodyBox);
  } 
- 
+
  		function showMsg(){
 			var bElem = this.querySelectorAll('.body')[0];
  			if (bElem.style.display === 'block'){
@@ -62,10 +62,10 @@
 		nMsg.addEventListener('click', showMsgB);
 		document.body.appendChild(nMsg);
 
-		var eCount = geemails.length++;
+		// var eCount = geemails.length++;
 		var eMail = document.getElementById('iCount');
 		eMail.className = 'newCount';
-		eMail.innerHTML = 'Inbox Count: ' + eCount;
+		eMail.innerHTML = 'Inbox Count: ' + iCount++;
 		countThis.appendChild(eMail);
 			
 		var seObj = document.createElement('div');
@@ -98,7 +98,7 @@
 		}
 	}
 
-newMsgs();
+// newMsgs();
 
 }
 
