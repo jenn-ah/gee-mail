@@ -1,3 +1,18 @@
+#logo {
+    margin-left: auto;
+    margin-right: auto;
+    background-size: 50%;
+}
+
+body {
+    background-image: url('/assets/16290.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    font-family: nunito;
+}  
+
 .subject {
     display: inline;
 }
@@ -12,11 +27,16 @@
 
 .body {
     display: none;
+    font-size: 17px;
 }
 
 .bodyMsg {
-    padding: 5px;
-    border: 2px solid blue;
+    padding: 10px;
+    border: 2px solid gray;
+    background: rgba(34, 32, 32, 0.7);
+    font-size: 15px;
+    border-radius: 7px;
+    
 }
 
 .senObj {
@@ -33,13 +53,19 @@
 
 .bodObj {
     display: none;
+    font-size: 17px;
 }
 
 .newMsgPar {
-    padding: 5px;
-    border: 2px solid blue;
+    padding: 10px;
+    border: 2px solid gray;
+    background: rgba(34, 32, 32, 0.7);
+    font-size: 15px;
+    border-radius: 7px;
+
 }
 
 .newCount {
     display: inline;
+    
 }

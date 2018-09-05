@@ -2,6 +2,7 @@
 	<head>
 		<script src="js/mail-generator.js"></script>
 		<link href="css/style.css" rel="stylesheet" media="screen">
+		<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <script>
       window.onload = function(){
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
@@ -14,8 +15,8 @@
 		// document.body.appendChild(inboxCount);
 
 		var inboxCount = document.createElement('div');
-		inboxCount.className = 'iCount';
-		inboxCount.innerHTML = 'Inbox: ' + geemails.length;
+		inboxCount.id = 'iCount';
+		inboxCount.innerHTML = 'Inbox: ';
 		document.body.appendChild(inboxCount);
 
 		for(var i = 0; i<geemails.length; i++){
@@ -59,7 +60,7 @@
 
         function newMsgs() {
 
-			var newDamnMsg = setInterval(newMsgs, 15000);
+			var newDamnMsg = setInterval(newMsgs, 10000);
 			var nMsg = document.createElement('div');
 			nMsg.className = 'newMsgPar';
 			nMsg.innerHTML = ' ';
@@ -67,10 +68,9 @@
 			document.body.appendChild(nMsg);
 
 			var eCount = geemails.length++;
-			var eMail = document.createElement('div');
+			var eMail = document.getElementById('iCount');
 			eMail.className = 'newCount';
-			eMail.innerHTML = eCount;
-			// console.log(eCount);
+			eMail.innerHTML = 'Inbox Count: ' + eCount;
 			inboxCount.appendChild(eMail);
 
  			// var num1 = geemails.length;
@@ -122,6 +122,7 @@ newMsgs();
 		<title>feeMail</title>
 	</head>
 	<body>
+		<img src="assets/fm1.png" alt="feeMail" id="logo">
 		<div class="container" id="main">
 		</div>
 	</body>
