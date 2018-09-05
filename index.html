@@ -66,7 +66,7 @@
 			var eMail = document.getElementById('iCount');
 			eMail.className = 'newCount';
 			eMail.innerHTML = 'Inbox Count: ' + eCount;
-			document.body.appendChild(eMail);
+			countThis.appendChild(eMail);
 			
 			var seObj = document.createElement('div');
 			seObj.className = 'senObj';
@@ -107,6 +107,8 @@ newMsgs();
 	</head>
 	<body>
 		<img src="assets/fm2.png" alt="feeMail" id="logo">
+		<div id="countThis">
+			</div>
 		<div class="container" id="main">
 		</div>
 	</body>
