@@ -41,8 +41,8 @@
 		bodyBox.className = 'body';
 		bodyBox.innerHTML = 'Body: ' + geemails[i].body;
 		mainDiv.appendChild(bodyBox);
-
  } 
+ 
  		function showMsg(){
 			var bElem = this.querySelectorAll('.body')[0];
  			if (bElem.style.display === 'block'){
@@ -53,42 +53,42 @@
 			}
 		}
 
-        function newMsgs() {
+    function newMsgs() {
 
-			var newDamnMsg = setInterval(newMsgs, 10000);
-			var nMsg = document.createElement('div');
-			nMsg.className = 'newMsgPar';
-			nMsg.innerHTML = ' ';
-			nMsg.addEventListener('click', showMsgB);
-			document.body.appendChild(nMsg);
+		var newDamnMsg = setInterval(newMsgs, 10000);
+		var nMsg = document.createElement('div');
+		nMsg.className = 'newMsgPar';
+		nMsg.innerHTML = ' ';
+		nMsg.addEventListener('click', showMsgB);
+		document.body.appendChild(nMsg);
 
-			var eCount = geemails.length++;
-			var eMail = document.getElementById('iCount');
-			eMail.className = 'newCount';
-			eMail.innerHTML = 'Inbox Count: ' + eCount;
-			countThis.appendChild(eMail);
+		var eCount = geemails.length++;
+		var eMail = document.getElementById('iCount');
+		eMail.className = 'newCount';
+		eMail.innerHTML = 'Inbox Count: ' + eCount;
+		countThis.appendChild(eMail);
 			
-			var seObj = document.createElement('div');
-			seObj.className = 'senObj';
-			seObj.innerHTML = 'Sender: ' + getNewMessage().sender + ' ';
-			nMsg.appendChild(seObj);
+		var seObj = document.createElement('div');
+		seObj.className = 'senObj';
+		seObj.innerHTML = 'Sender: ' + getNewMessage().sender + ' ';
+		nMsg.appendChild(seObj);
 
-			var dObj = document.createElement('div');
-			dObj.className = 'datObj';
-			dObj.innerHTML = 'Date: ' + getNewMessage().date + ' ';
-			nMsg.appendChild(dObj);
+		var dObj = document.createElement('div');
+		dObj.className = 'datObj';
+		dObj.innerHTML = 'Date: ' + getNewMessage().date + ' ';
+		nMsg.appendChild(dObj);
 
-			var sObj = document.createElement('div');
-			sObj.className = 'subObj';
-			sObj.innerHTML = 'Subject: ' + getNewMessage().subject;
-			nMsg.appendChild(sObj);
+		var sObj = document.createElement('div');
+		sObj.className = 'subObj';
+		sObj.innerHTML = 'Subject: ' + getNewMessage().subject;
+		nMsg.appendChild(sObj);
 
-			var bObj = document.createElement('div');
-			bObj.className = 'bodObj';
-			bObj.innerHTML = 'Body: ' + getNewMessage().body + ' ';
-			nMsg.appendChild(bObj);
+		var bObj = document.createElement('div');
+		bObj.className = 'bodObj';
+		bObj.innerHTML = 'Body: ' + getNewMessage().body + ' ';
+		nMsg.appendChild(bObj);
 
-			function showMsgB(){
+		function showMsgB(){
 			var bElem2 = this.querySelectorAll('.bodObj')[0];
  			if (bElem2.style.display === 'block'){
    				bElem2.style.display = 'none';
@@ -108,7 +108,7 @@ newMsgs();
 	<body>
 		<img src="assets/fm2.png" alt="feeMail" id="logo">
 		<div id="countThis">
-			</div>
+		</div>
 		<div class="container" id="main">
 		</div>
 	</body>
