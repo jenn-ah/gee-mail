@@ -10,7 +10,8 @@
 
 		var inboxCount = document.createElement('div');
 		inboxCount.id = 'iCount';
-		inboxCount.innerHTML = 'Inbox Count: ' + geemails.length;
+		// inboxCount.innerHTML = 'Inbox Count: ' + geemails.length;
+		inboxCount.innerHTML = ' ';
 		document.body.appendChild(inboxCount);
 
 		for(var i = 0; i<geemails.length; i++){
@@ -19,7 +20,7 @@
   		mainDiv.className = 'bodyMsg';
   		mainDiv.innerHTML = " ";
   		mainDiv.addEventListener('click', showMsg);
-  		document.body.appendChild(mainDiv);
+		document.body.appendChild(mainDiv);
 
 		var senderBox = document.createElement('div');
 		senderBox.className = 'sender';
@@ -40,7 +41,13 @@
 		bodyBox.className = 'body';
 		bodyBox.innerHTML = 'Body: ' + geemails[i].body;
 		mainDiv.appendChild(bodyBox);
- } 
+
+// 		function bodyLength() {
+//     	var bLength = document.getElementsByClassName("bodyMsg");
+//     	document.getElementById("iCount").innerHTML = 'Inbox Count: ' + bLength.length;
+// 		}
+// bodyLength();
+ }
 
  		function showMsg(){
 			var bElem = this.querySelectorAll('.body')[0];
@@ -54,11 +61,27 @@
 
     function newMsgs() {
 
-		var eCount = geemails.length++;
-		var eMail = document.getElementById('iCount');
-		eMail.className = 'newCount';
-		eMail.innerHTML = 'Inbox Count: ' + ++eCount;
-		countThis.appendChild(eMail);
+		// var eCount = geemails.length++;
+		// var eMail = document.getElementById('iCount');
+		// eMail.className = 'newCount';
+		// eMail.innerHTML = 'Inbox Count: ' + ++eCount;
+		// countThis.appendChild(eMail);
+
+		var bLength = document.getElementsByClassName("bodyMsg");
+		// document.getElementById("iCount").innerHTML = 'Inbox Count: ' + bLength.length++;
+		var bL1 = ++bLength.length;
+		console.log(bL1);
+		bLength.className = 'revisedCount';
+		bLength.innerHTML = 'Inbox Count: ' + bL1;
+		inboxCount.appendChild(bLength);
+
+		// var revCount = document.getElementsByClassName('subject');
+		// var revC1 = .subject.length++;
+		// revCount.className = 'revisedCount';
+		// revCount.innerHTML = 'Inbox Count: ' + revC1;
+		// inboxCount.appendChild(revCount);
+
+		// console.log(subject[i].length);
 
 		var nMsg = document.createElement('div');
 		nMsg.className = 'newMsgPar';
@@ -67,23 +90,27 @@
 		document.body.appendChild(nMsg);
 			
 		var seObj = document.createElement('div');
+		var sen1 = getNewMessage().sender;
 		seObj.className = 'senObj';
-		seObj.innerHTML = 'Sender: ' + getNewMessage().sender + ' ';
+		seObj.innerHTML = 'Sender: ' + sen1 + ' ';
 		nMsg.appendChild(seObj);
 
 		var dObj = document.createElement('div');
+		var dat1 = getNewMessage().date;
 		dObj.className = 'datObj';
-		dObj.innerHTML = 'Date: ' + getNewMessage().date + ' ';
+		dObj.innerHTML = 'Date: ' + dat1 + ' ';
 		nMsg.appendChild(dObj);
 
 		var sObj = document.createElement('div');
+		var sub1 = getNewMessage().subject;
 		sObj.className = 'subObj';
-		sObj.innerHTML = 'Subject: ' + getNewMessage().subject;
+		sObj.innerHTML = 'Subject: ' + sub1 + ' ';
 		nMsg.appendChild(sObj);
 
 		var bObj = document.createElement('div');
+		var bod1 = getNewMessage().body;
 		bObj.className = 'bodObj';
-		bObj.innerHTML = 'Body: ' + getNewMessage().body + ' ';
+		bObj.innerHTML = 'Body: ' + bod1 + ' ';
 		nMsg.appendChild(bObj);
 
 		function showMsgB(){
