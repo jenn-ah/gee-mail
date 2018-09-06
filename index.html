@@ -11,7 +11,7 @@
 
 		var inboxCount = document.createElement('div');
 		inboxCount.id = 'iCount';
-		inboxCount.innerHTML = 'Inbox Count: ' + geemails.length++;
+		inboxCount.innerHTML = 'Inbox Count: ' + geemails.length;
 		document.body.appendChild(inboxCount);
 
 		for(var i = 0; i<geemails.length; i++){
@@ -103,7 +103,7 @@
 		}
 	}
 
-setInterval(newMsgs, 10000);
+setInterval(newMsgs, 3000);
 
 }
 
