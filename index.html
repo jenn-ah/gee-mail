@@ -11,7 +11,7 @@
 
 		var inboxCount = document.createElement('div');
 		inboxCount.id = 'iCount';
-		inboxCount.innerHTML = 'Inbox Count: ' + geemails.length;
+		inboxCount.innerHTML = 'Inbox Count: ' + geemails.length++;
 		document.body.appendChild(inboxCount);
 
 		for(var i = 0; i<geemails.length; i++){
@@ -55,6 +55,12 @@
 
     function newMsgs() {
 
+		var eCount = geemails.length++;
+		var eMail = document.getElementById('iCount');
+		eMail.className = 'newCount';
+		eMail.innerHTML = 'Inbox Count: ' + ++eCount;
+		countThis.appendChild(eMail);
+
 		var nMsg = document.createElement('div');
 		nMsg.className = 'newMsgPar';
 		nMsg.innerHTML = ' ';
@@ -62,10 +68,10 @@
 		document.body.appendChild(nMsg);
 
 		// var eCount = geemails.length++;
-		var eMail = document.getElementById('iCount');
-		eMail.className = 'newCount';
-		eMail.innerHTML = 'Inbox Count: ' + geemails.length++;
-		countThis.appendChild(eMail);
+		// var eMail = document.getElementById('iCount');
+		// eMail.className = 'newCount';
+		// eMail.innerHTML = 'Inbox Count: ' + geemails.length++;
+		// countThis.appendChild(eMail);
 			
 		var seObj = document.createElement('div');
 		seObj.className = 'senObj';
