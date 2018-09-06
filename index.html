@@ -68,12 +68,19 @@
 		// countThis.appendChild(eMail);
 
 		var bLength = document.getElementsByClassName("bodyMsg");
-		// document.getElementById("iCount").innerHTML = 'Inbox Count: ' + bLength.length++;
-		var bL1 = ++bLength.length;
-		console.log(bL1);
+		// // document.getElementById("iCount").innerHTML = 'Inbox Count: ' + bLength.length++;
+		var bL1 = bodyMsg.length;
+		// var bL2 = ++bL1;
+		// console.log(bLength.length);
 		bLength.className = 'revisedCount';
-		bLength.innerHTML = 'Inbox Count: ' + bL1;
-		inboxCount.appendChild(bLength);
+		bLength.innerHTML = 'Inbox Count: ' + ++bL1;
+		countThis.appendChild(bLength);
+		// console.log(bL1);
+
+		// function tryingThis(){
+		// var countMe = this.querySelectorAll('.bodyMsg');
+		// console.log(countMe.length);
+		// }
 
 		// var revCount = document.getElementsByClassName('subject');
 		// var revC1 = .subject.length++;
