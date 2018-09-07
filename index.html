@@ -6,12 +6,6 @@
     <script>
       window.onload = function(){
 
-		var bLength = document.getElementsByClassName("bodyMsg");
-		var inboxCount = document.createElement('div');
-		inboxCount.id = 'iCount';
-		inboxCount.innerHTML = 'Inbox Count: ' + bLength.length;
-		countThis.appendChild(inboxCount);
-
 		for(var i = 0; i<geemails.length; i++){
 
 		var mainDiv = document.createElement('div');
@@ -42,11 +36,11 @@
 
  }
 
-		//  var bLength = document.getElementsByClassName("bodyMsg");
-		//  var useMe = document.getElementById('iCount');
-		// // inboxCount.innerHTML = 'Inbox Count: ' + bLength.length;
-		// useMe.innerHTML = 'Inbox Count: ' + bLength.length;
-		// countThis.appendChild(inboxCount);
+		var bLength = document.getElementsByClassName("bodyMsg");
+		var inboxCount = document.createElement('div');
+		inboxCount.id = 'iCount';
+		inboxCount.innerHTML = 'Inbox Count: ' + bLength.length;
+		countThis.appendChild(inboxCount);
 
 
  		function showMsg(){
@@ -65,8 +59,8 @@
     function newMsgs() {
 
 		var useMe = document.getElementById('iCount');
-		var bLength = document.getElementsByClassName("bodyMsg");
-		useMe.innerHTML = 'Inbox Count: ' + bLength.length++;
+		var notSure = bLength.length;
+		useMe.innerHTML = 'Inbox Count: ' + ++notSure;
 		countThis.appendChild(useMe);
 
 		var nMsg = document.createElement('div');
