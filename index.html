@@ -66,27 +66,24 @@
 		document.body.appendChild(nMsg);
 			
 		var seObj = document.createElement('div');
-		var sen1 = getNewMessage().sender;
+		var newM = getNewMessage();
 		seObj.className = 'senObj';
-		seObj.innerHTML = 'Sender: ' + sen1 + ' ';
+		seObj.innerHTML = 'Sender: ' + newM.sender + ' ';
 		nMsg.appendChild(seObj);
 
 		var dObj = document.createElement('div');
-		var dat1 = getNewMessage().date;
 		dObj.className = 'datObj';
-		dObj.innerHTML = 'Date: ' + dat1 + ' ';
+		dObj.innerHTML = 'Date: ' + newM.date + ' ';
 		nMsg.appendChild(dObj);
 
 		var sObj = document.createElement('div');
-		var sub1 = getNewMessage().subject;
 		sObj.className = 'subObj';
-		sObj.innerHTML = 'Subject: ' + sub1 + ' ';
+		sObj.innerHTML = 'Subject: ' + newM.subject + ' ';
 		nMsg.appendChild(sObj);
 
 		var bObj = document.createElement('div');
-		var bod1 = getNewMessage().body;
 		bObj.className = 'bodObj';
-		bObj.innerHTML = 'Body: ' + bod1 + ' ';
+		bObj.innerHTML = 'Body: ' + newM.body + ' ';
 		nMsg.appendChild(bObj);
 
 		function showMsgB(){
