@@ -54,18 +54,15 @@
 		}
 
 
-// console.log(bL1);
-
     function newMsgs() {
 
+		var incMe = bLength.length++;
 		var useMe = document.getElementById('iCount');
-		var notSure = bLength.length;
-		useMe.innerHTML = 'Inbox Count: ' + ++notSure;
+		useMe.innerHTML = 'Inbox Count: ' + ++incMe;
 		countThis.appendChild(useMe);
 
 		var nMsg = document.createElement('div');
-		nMsg.className = 'newMsgPar';
-		nMsg.innerHTML = ' ';
+		nMsg.className = 'bodyMsg';
 		nMsg.addEventListener('click', showMsgB);
 		document.body.appendChild(nMsg);
 			
@@ -102,11 +99,6 @@
 			}
 		}
 	}
-
-		// var bLength = document.getElementsByClassName("bodyMsg");
-		// inboxCount.id = 'iCount';
-		// inboxCount.innerHTML = 'Inbox Count: ' + bLength.length;
-		// document.body.appendChild(inboxCount);
 		
 
 setInterval(newMsgs, 3000);
