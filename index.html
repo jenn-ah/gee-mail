@@ -5,14 +5,12 @@
 		<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <script>
       window.onload = function(){
-        // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
-        // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
 
+		var bLength = document.getElementsByClassName("bodyMsg");
 		var inboxCount = document.createElement('div');
 		inboxCount.id = 'iCount';
-		// inboxCount.innerHTML = 'Inbox Count: ' + geemails.length;
-		inboxCount.innerHTML = ' ';
-		document.body.appendChild(inboxCount);
+		inboxCount.innerHTML = 'Inbox Count: ' + bLength.length;
+		countThis.appendChild(inboxCount);
 
 		for(var i = 0; i<geemails.length; i++){
 
@@ -42,12 +40,14 @@
 		bodyBox.innerHTML = 'Body: ' + geemails[i].body;
 		mainDiv.appendChild(bodyBox);
 
-// 		function bodyLength() {
-//     	var bLength = document.getElementsByClassName("bodyMsg");
-//     	document.getElementById("iCount").innerHTML = 'Inbox Count: ' + bLength.length;
-// 		}
-// bodyLength();
  }
+
+		//  var bLength = document.getElementsByClassName("bodyMsg");
+		//  var useMe = document.getElementById('iCount');
+		// // inboxCount.innerHTML = 'Inbox Count: ' + bLength.length;
+		// useMe.innerHTML = 'Inbox Count: ' + bLength.length;
+		// countThis.appendChild(inboxCount);
+
 
  		function showMsg(){
 			var bElem = this.querySelectorAll('.body')[0];
@@ -59,36 +59,15 @@
 			}
 		}
 
+
+// console.log(bL1);
+
     function newMsgs() {
 
-		// var eCount = geemails.length++;
-		// var eMail = document.getElementById('iCount');
-		// eMail.className = 'newCount';
-		// eMail.innerHTML = 'Inbox Count: ' + ++eCount;
-		// countThis.appendChild(eMail);
-
+		var useMe = document.getElementById('iCount');
 		var bLength = document.getElementsByClassName("bodyMsg");
-		// // document.getElementById("iCount").innerHTML = 'Inbox Count: ' + bLength.length++;
-		var bL1 = bodyMsg.length;
-		// var bL2 = ++bL1;
-		// console.log(bLength.length);
-		bLength.className = 'revisedCount';
-		bLength.innerHTML = 'Inbox Count: ' + ++bL1;
-		countThis.appendChild(bLength);
-		// console.log(bL1);
-
-		// function tryingThis(){
-		// var countMe = this.querySelectorAll('.bodyMsg');
-		// console.log(countMe.length);
-		// }
-
-		// var revCount = document.getElementsByClassName('subject');
-		// var revC1 = .subject.length++;
-		// revCount.className = 'revisedCount';
-		// revCount.innerHTML = 'Inbox Count: ' + revC1;
-		// inboxCount.appendChild(revCount);
-
-		// console.log(subject[i].length);
+		useMe.innerHTML = 'Inbox Count: ' + bLength.length++;
+		countThis.appendChild(useMe);
 
 		var nMsg = document.createElement('div');
 		nMsg.className = 'newMsgPar';
@@ -129,6 +108,12 @@
 			}
 		}
 	}
+
+		// var bLength = document.getElementsByClassName("bodyMsg");
+		// inboxCount.id = 'iCount';
+		// inboxCount.innerHTML = 'Inbox Count: ' + bLength.length;
+		// document.body.appendChild(inboxCount);
+		
 
 setInterval(newMsgs, 3000);
 
